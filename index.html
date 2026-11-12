@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kアリーナ座席マップ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Kアリーナ座席マップ</h1>
+
+    <div class="input-area">
+
+        <label>
+            名前
+            <input type="text" id="name" placeholder="名前を入力">
+        </label>
+
+        <label>
+            LEVEL
+            <select id="level">
+                <option value="1">LEVEL 1</option>
+                <option value="3">LEVEL 3</option>
+                <option value="5">LEVEL 5</option>
+                <option value="7">LEVEL 7</option>
+            </select>
+        </label>
+
+        <label>
+            列
+            <input type="number" id="row" placeholder="例：12" inputmode="numeric">
+        </label>
+
+        <label>
+            座席番号
+            <input type="number" id="seat" placeholder="例：34" inputmode="numeric">
+        </label>
+
+        <button id="addButton">座席を登録</button>
+
+        <button id="nameToggleButton">名前表示：OFF</button>
+
+    </div>
+
+    <p id="message"></p>
+
+    <div class="main">
+
+        <div class="map-area">
+
+            <img
+                src="assets/k_arena_vector.svg"
+                id="map"
+                alt="Kアリーナ座席マップ"
+                draggable="false"
+            >
+
+            <div id="pins"></div>
+
+        </div>
+
+        <div class="member-area">
+
+            <h2>参加者</h2>
+
+            <ul id="memberList"></ul>
+
+        </div>
+
+    </div>
+
+    <script src="seat-data.js"></script>
+    <script type="module" src="script.js"></script>
+
+</body>
+
+</html>
